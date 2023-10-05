@@ -5,7 +5,7 @@ import './app.css'
 
 export function App() {
   const [count, setCount] = useState(0)
-
+  let name = 'Cristian';
   return (
     <>
       <div>
@@ -17,11 +17,12 @@ export function App() {
         </a>
       </div>
       <h1>Vite + Preact</h1>
+      <h2>{name}</h2>
       <div class="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
-        <p>
+        <p key={"123"}>
           Edit <code>src/app.jsx</code> and save to test HMR
         </p>
       </div>
