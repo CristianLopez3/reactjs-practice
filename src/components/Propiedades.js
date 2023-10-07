@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 
 export default function Propiedades(props) {
@@ -9,6 +10,10 @@ export default function Propiedades(props) {
         <li>{props.name}</li>
         <li>{props.number}</li>
         <li>{props.boolean ? "True" : "false"}</li>
+        <li>{props.array.join(", ")}</li>
+        <li>{props.objecto.nombre}</li>
+        <li>{props.elementReact}</li>
+        <li>{props.componentReact}</li>
       </ul>
     </div>
   )
@@ -16,4 +21,9 @@ export default function Propiedades(props) {
 
 Propiedades.defaultProps = {
   porDefecto: "Propiedad por defecto"
+}
+
+Propiedades.propTypes = {
+  name: PropTypes.string,
+  number: PropTypes.number
 }

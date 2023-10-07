@@ -32,7 +32,15 @@ export function App() {
       <section>
         <Componente msg="Hola, soy un mensaje en las props" />
         <br />
-        <Propiedades name = "Cristian" number = {123} boolean = {true} />
+        <Propiedades
+         name = "Cristian" 
+         number = {123} 
+         boolean = {true}  
+         objecto = {{nombre: "Cristian"}} 
+         array = {[4, 5, 6]} 
+         elementReact = {<i>Hola, soy un elemento de react</i>} 
+         componentReact = {<Componente msg="Hola, soy  un componente de react"/>} 
+         />
       </section>
     </>
   )
