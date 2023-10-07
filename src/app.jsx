@@ -4,6 +4,7 @@ import preactLogo from './assets/preact.svg'
 import viteLogo from '/vite.svg'
 import './app.css';
 import Componente from './components/Componente';
+import Propiedades from './components/Propiedades';
 
 export function App() {
   const [count, setCount] = useState(0)
@@ -13,8 +14,7 @@ export function App() {
       <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} class="logo" alt="Vite logo" />
-        </a>        
-        <Componente/>         
+        </a>
         <a href="https://preactjs.com" target="_blank">
           <img src={preactLogo} class="logo preact" alt="Preact logo" />
         </a>
@@ -29,6 +29,11 @@ export function App() {
           Edit <code>src/app.jsx</code> and save to test HMR
         </p>
       </div>
+      <section>
+        <Componente msg="Hola, soy un mensaje en las props" />
+        <br />
+        <Propiedades name = "Cristian" number = {123} boolean = {true} />
+      </section>
     </>
   )
 }
