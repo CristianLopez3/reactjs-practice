@@ -6,7 +6,7 @@ import Propiedades from './components/Propiedades';
 import Estado from './components/Estado';
 import RenderizadoCondicional from './components/RenderizadoCondicional';
 import RenderizadoElementos from './components/RenderizadoElementos';
-import Eventos from './components/Eventos';
+import { EventosEM6, EventosEM7 } from './components/Eventos';
 
 export function App() {
   const [count, setCount] = useState(0)
@@ -33,7 +33,9 @@ export function App() {
         <hr />
         <RenderizadoElementos />
         <hr />
-        <Eventos />
+        <EventosEM6 />
+        <hr />
+        <EventosEM7 />
       </section>
     </>
   )
