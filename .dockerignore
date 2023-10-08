@@ -1,0 +1,4 @@
+node_modules
+.gitignore
+package*.json
+vite.config.js

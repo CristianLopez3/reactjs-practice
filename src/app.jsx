@@ -5,6 +5,7 @@ import viteLogo from '/vite.svg'
 import './app.css';
 import Componente from './components/Componente';
 import Propiedades from './components/Propiedades';
+import Estado from './components/Estado';
 
 export function App() {
   const [count, setCount] = useState(0)
@@ -41,6 +42,8 @@ export function App() {
          elementReact = {<i>Hola, soy un elemento de react</i>} 
          componentReact = {<Componente msg="Hola, soy  un componente de react"/>} 
          />
+         <hr />
+         <Estado />
       </section>
     </>
   )
