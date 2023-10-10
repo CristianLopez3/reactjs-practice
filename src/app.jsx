@@ -8,6 +8,7 @@ import RenderizadoCondicional from './components/RenderizadoCondicional';
 import RenderizadoElementos from './components/RenderizadoElementos';
 import { EventosEM6, EventosEM7, MasSobreEventos } from './components/Eventos';
 import { Padre } from './components/ComunicacionEntreComponentes';
+import CicloVida from './components/CicloVida';
 
 export function App() {
   const [count, setCount] = useState(0)
@@ -50,6 +51,11 @@ export function App() {
         <hr />
 
         <Padre />
+        <hr />
+
+        <CicloVida />
+        <hr />
+
 
       </section>
     </>
