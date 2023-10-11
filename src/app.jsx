@@ -9,6 +9,7 @@ import RenderizadoElementos from './components/RenderizadoElementos';
 import { EventosEM6, EventosEM7, MasSobreEventos } from './components/Eventos';
 import { Padre } from './components/ComunicacionEntreComponentes';
 import CicloVida from './components/CicloVida';
+import AjaxApis from './components/AjaxApis';
 
 export function App() {
   const [count, setCount] = useState(0)
@@ -56,6 +57,8 @@ export function App() {
         <CicloVida />
         <hr />
 
+        <AjaxApis />
+        <hr />
 
       </section>
     </>
