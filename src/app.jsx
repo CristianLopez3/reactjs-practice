@@ -11,6 +11,7 @@ import { Padre } from './components/ComunicacionEntreComponentes';
 import CicloVida from './components/CicloVida';
 import AjaxApis from './components/AjaxApis';
 import ContadorHooks from './components/ContadorHooks';
+import ScrollHooks from './components/ScrollHooks';
 
 export function App() {
   const [count, setCount] = useState(0)
@@ -62,6 +63,9 @@ export function App() {
         <hr />
 
         <ContadorHooks titulo = "Desde app.jsx" />
+        <hr />
+
+        <ScrollHooks />
         <hr />
 
       </section>
