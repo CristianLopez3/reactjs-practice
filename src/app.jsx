@@ -12,6 +12,7 @@ import CicloVida from './components/CicloVida';
 import AjaxApis from './components/AjaxApis';
 import ContadorHooks from './components/ContadorHooks';
 import ScrollHooks from './components/ScrollHooks';
+import RelofHooks from './components/RelojHooks';
 
 export function App() {
   const [count, setCount] = useState(0)
@@ -66,6 +67,9 @@ export function App() {
         <hr />
 
         <ScrollHooks />
+        <hr />
+
+        <RelofHooks />
         <hr />
 
       </section>
