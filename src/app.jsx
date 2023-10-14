@@ -10,6 +10,7 @@ import { EventosEM6, EventosEM7, MasSobreEventos } from './components/Eventos';
 import { Padre } from './components/ComunicacionEntreComponentes';
 import CicloVida from './components/CicloVida';
 import AjaxApis from './components/AjaxApis';
+import ContadorHooks from './components/ContadorHooks';
 
 export function App() {
   const [count, setCount] = useState(0)
@@ -58,6 +59,9 @@ export function App() {
         <hr />
 
         <AjaxApis />
+        <hr />
+
+        <ContadorHooks titulo = "Desde app.jsx" />
         <hr />
 
       </section>

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 function Pokemon(props) {
   return (
-    <figure>
+    <figure className='pokemons'>
       <img src={props.url} alt={props.name} />
       <figcaption>{props.name}</figcaption> {/* Corrección de la etiqueta */}
     </figure>
@@ -19,12 +19,12 @@ export default class AjaxApis extends Component {
     fetch(url)
       .then((res) => res.json())
       .then((json) => {
-        console.log(json);
+        // console.log(json);
         json.results.forEach((el) => {
           fetch(el.url)
             .then((res) => res.json())
             .then((json) => {
-              console.log(json);
+              // console.log(json);
               let pokemon = {
                 id: json.id,
                 name: json.name,

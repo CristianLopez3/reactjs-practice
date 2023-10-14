@@ -7,7 +7,7 @@ class Reloj extends Component{
   }
 
   componentWillUnmount(){
-    console.log(3, "El componente ha sido eliminado del DOM");
+  //  console.log(3, "El componente ha sido eliminado del DOM");
   }
 
   render(){
@@ -19,7 +19,7 @@ export default class CicloVida extends Component {
 
   constructor(props) {
     super(props);
-    console.log(0, "El componente se inicializa, aun NO esta en el DOM");
+   // console.log(0, "El componente se inicializa, aun NO esta en el DOM");
     this.state = {
       hora: new Date().toLocaleTimeString(),
       visible: false
@@ -30,16 +30,15 @@ export default class CicloVida extends Component {
   
   // Todo servicio (api, data), se consume en el metodo componentDidMount.
   componentDidMount(){
-    console.log(1, "Se inicializa el component")
+    //console.log(1, "Se inicializa el component")
   }
 
   componentDidUpdate(prevProps, prevState){
-    console.log(2, "El estado del componente ha cambiado");
+   // console.log(2, "El estado del componente ha cambiado");
     console.log(prevProps);
     console.log(prevState);
   }
-
-
+  
 
   Tictac = () => {
     this.temporizador = setInterval(() => {
@@ -60,7 +59,7 @@ export default class CicloVida extends Component {
   }
 
   render() {
-    console.log(4, "el componente ya se dibujo")
+    // console.log(4, "el componente ya se dibujo")
     return (
       <>
         <h2>ciclo de vida de los componentes</h2>
