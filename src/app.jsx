@@ -13,6 +13,8 @@ import AjaxApis from './components/AjaxApis';
 import ContadorHooks from './components/ContadorHooks';
 import ScrollHooks from './components/ScrollHooks';
 import RelofHooks from './components/RelojHooks';
+// ==========================================================================
+import AjaxConHooks from './components/AjaxConHooks';
 
 export function App() {
   const [count, setCount] = useState(0)
@@ -20,7 +22,7 @@ export function App() {
   return (
     <>
 
-      <section>
+      <section className="hidden">
 
         <Componente msg="Hola, soy un mensaje en las props" />
         <br />
@@ -73,6 +75,11 @@ export function App() {
         <hr />
 
       </section>
+
+      <section>
+        <AjaxConHooks />
+      </section>
+
     </>
   )
 }
