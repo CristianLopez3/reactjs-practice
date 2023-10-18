@@ -15,6 +15,7 @@ import ScrollHooks from './components/ScrollHooks';
 import RelofHooks from './components/RelojHooks';
 // ==========================================================================
 import AjaxConHooks from './components/AjaxConHooks';
+import HooksPersonalizados from './components/HooksPersonalizados';
 
 export function App() {
   const [count, setCount] = useState(0)
@@ -76,8 +77,8 @@ export function App() {
 
       </section>
 
-      <section>
-        <AjaxConHooks />
+      <section >
+        <HooksPersonalizados />
       </section>
 
     </>
