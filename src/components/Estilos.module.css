@@ -1,0 +1,13 @@
+
+
+.success{
+  background: greenyellow;
+  color: #000;
+  border-radius: .8rem;
+}
+
+.error{
+  background-color: rgba(255, 0, 0, 0.548);
+  color: whitesmoke;
+  border-radius: .8rem;
+}

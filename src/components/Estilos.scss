@@ -1,0 +1,15 @@
+$bg-sass: #ce5290;
+$bg-sass-80: #ce529080;
+
+.bg-sass{
+  background-color: $bg-sass;
+  border-radius: .5rem;
+  padding: 1rem 2rem;
+  margin: 1rem;
+  transition: background-color 1s ease-in-out;
+
+  &:hover{
+    background-color:$bg-sass-80;
+  }
+
+}
