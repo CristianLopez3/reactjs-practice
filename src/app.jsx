@@ -19,6 +19,7 @@ import HooksPersonalizados from './components/HooksPersonalizados';
 import Referencias from './components/Referencias';
 import Formularios from './components/Formuilarios';
 import Estilos from './components/Estilos';
+import ComponentesEstilizados from './components/ComponentesEstilizados';
 
 export function App() {
   const [count, setCount] = useState(0)
@@ -92,6 +93,9 @@ export function App() {
 
       <section >
         <Estilos />
+        <hr />
+        <ComponentesEstilizados />
+        <br />
       </section>
 
     </>

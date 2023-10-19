@@ -12,7 +12,8 @@
     "node-sass": "^9.0.0",
     "preact": "^10.16.0",
     "prop-types": "^15.8.1",
-    "sass": "^1.69.4"
+    "sass": "^1.69.4",
+    "styled-components": "^6.1.0"
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.5.0",

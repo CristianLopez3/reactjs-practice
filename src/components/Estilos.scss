@@ -6,7 +6,7 @@ $bg-sass-80: #ce529080;
   border-radius: .5rem;
   padding: 1rem 2rem;
   margin: 1rem;
-  transition: background-color 1s ease-in-out;
+  transition: background-color 1s ease-out;
 
   &:hover{
     background-color:$bg-sass-80;
