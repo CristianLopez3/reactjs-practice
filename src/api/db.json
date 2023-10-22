@@ -1,0 +1,24 @@
+{
+  "protas": [
+    {
+      "character": "Naruto",
+      "anime": "Naruto",
+      "id": 10
+    },
+    {
+      "character": "Goku",
+      "anime": "Dragon Ball",
+      "id": 2
+    },
+    {
+      "character": "Brook",
+      "anime": "One piece",
+      "id": 3
+    },
+    {
+      "character": "Seiya",
+      "anime": "Saint Seiya",
+      "id": 4
+    }
+  ]
+}
