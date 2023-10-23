@@ -47,6 +47,15 @@ input[type="reset"]{
   text-align: center;
   vertical-align: middle;
   cursor: pointer;
+  transition: .4s;
+}
+
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover{
+  background-color: #000;
+  color: #fff;
+  border: thin solid #fff;
 }
 
 form{

@@ -19,6 +19,11 @@
       "character": "Seiya",
       "anime": "Saint Seiya",
       "id": 4
+    },
+    {
+      "character": "Alucard",
+      "anime": "Hellsing",
+      "id": 6
     }
   ]
 }
