@@ -32,13 +32,31 @@ function CrudApi() {
         setloading(false);
       })
       .catch((err) => err);
-      
-  }, [ url ]); // actualizar cada que se cambie la url
+  }, [url]); // actualizar cada que se cambie la url
 
   /* Los elementos hijos se comunican a traves de funciones */
   // POST METHOD
   const createData = (data) => {
     data.id = Date.now();
+
+    let options  = {
+      body: data, 
+      headers: {
+        "content-type": "application/json",
+      }
+    }
+
+    api.post(url, options ).then((res) => {
+      console.log("error");
+      if(!res.err){
+        setDb([...db, data]);
+      } else {
+        setError(res);
+      }
+
+
+    });
+
     setDb([...db, data]);
   };
 
@@ -74,7 +92,12 @@ function CrudApi() {
         />
 
         {loading && <Loader />}
-        {error && <Message msg={`Error ${error.status}: ${error.statusText}`} bgColor="#db3545" />}
+        {error && (
+          <Message
+            msg={`Error ${error.status}: ${error.statusText}`}
+            bgColor="#db3545"
+          />
+        )}
         {db && (
           <CrudTable
             dataDb={db}
