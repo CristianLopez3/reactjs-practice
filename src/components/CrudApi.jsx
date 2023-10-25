@@ -39,22 +39,20 @@ function CrudApi() {
   const createData = (data) => {
     data.id = Date.now();
 
-    let options  = {
-      body: data, 
+    let options = {
+      body: data,
       headers: {
         "content-type": "application/json",
-      }
-    }
+      },
+    };
 
-    api.post(url, options ).then((res) => {
+    api.post(url, options).then((res) => {
       console.log("error");
-      if(!res.err){
+      if (!res.err) {
         setDb([...db, data]);
       } else {
         setError(res);
       }
-
-
     });
 
     setDb([...db, data]);
@@ -62,8 +60,27 @@ function CrudApi() {
 
   // PUT METHOD
   const updateData = (data) => {
-    let newData = db.map((el) => (el.id === data.id ? data : el));
-    setDb(newData);
+    let endpoint = `${url}/${data.id}`; // url a editar
+
+    let options = {
+      body: data,
+      headers: {
+        "content-type": "application/json",
+      },
+    };
+
+    // Solicitud a la api
+    api
+      .put(endpoint, options)
+      .then((res) => {
+        if (!res.err) {
+          let newData = db.map((el) => (el.id === data.id ? data : el));
+          setDb(newData);
+        } else {
+          setError(err); // actualizar el mensaje de error
+        }
+      })
+      .catch((err) => err);
   };
 
   // DELETE METHOD
@@ -71,12 +88,30 @@ function CrudApi() {
     let isDelete = window.confirm(
       `Are you sure of delete the register with id ${id}`
     );
+
+    let endpoint = `${url}/${id}`;
+    let options = {
+      headers: {
+        "content-type": "application/json",
+      },
+    };
+
     if (isDelete) {
-      let newData = db.filter((el) => el.id !== id);
-      setDb(newData);
+      api
+        .del(endpoint, options)
+        .then((res) => {
+          if (!res.err) {
+            let newData = db.filter((el) => el.id !== id);
+            setDb(newData);
+          } else {
+            setError(err);
+          }
+        })
+        .catch((err) => err);
     } else {
       return;
     }
+    
   };
 
   return (
