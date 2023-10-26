@@ -6,7 +6,10 @@ const SelectAnidados = () => {
   const [department, setDepartment] = useState("");
   const [town, setTown] = useState("");
 
+
+
   return (
+    
     <div>
       <h2>Select anidados</h2>
       <h3>Colombia</h3>
@@ -15,26 +18,30 @@ const SelectAnidados = () => {
       </pre>
 
       <SelectList
+        key="1342"
         title="Region"
-        url=""
-        handleChange={(e) =>  setRegion(e.target.value)}
+        url="https://api-colombia.com/api/v1/Region"
+        handleChange={(e) => setRegion(e.target.value)}
       />
 
       {region && (
         <SelectList
-          title="Departamentos"
-          url=""
+          key="1234"
+          title="Department"
+          url={`https://api-colombia.com/api/v1/department`}
           handleChange={(e) => setDepartment(e.target.value)}
         />
       )}
 
       {department && (
         <SelectList
-          title="Municipios"
-          url=""
+          key="13512"
+          title="Cities"
+          url={`https://api-colombia.com/api/v1/department/${department}/cities`}
           handleChange={(e) => setTown(e.target.value)}
         />
       )}
+
     </div>
   );
 };
@@ -42,6 +49,6 @@ const SelectAnidados = () => {
 export default SelectAnidados;
 /**
  *
- * fetch("https://api-colombia.com/api/v1/Department/15/cities").then(res=> res.json()).then(json=>console.log(json)).catch(err => err)
+
  *
  */
