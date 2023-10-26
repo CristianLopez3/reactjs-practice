@@ -47,7 +47,7 @@ function CrudApi() {
     };
 
     api.post(url, options).then((res) => {
-      console.log("error");
+     // console.log("error");
       if (!res.err) {
         setDb([...db, data]);
       } else {

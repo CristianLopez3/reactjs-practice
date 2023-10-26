@@ -1,0 +1,38 @@
+section{
+  margin: 0 auto;
+  height: auto;
+  width: 400px;
+  border-radius: 1rem;
+  padding: 1rem;
+  border: thin solid #000;
+  text-align: center;
+}
+
+section h3{
+  font-size: 1.5rem;
+}
+
+section h4{
+  font-size: .9rem;
+  font-style: italic;
+}
+
+section a{
+  margin: 1rem auto;
+  padding: .7rem 3rem;
+  background: #000;
+  color: #fff;
+  border-radius: .5rem;
+  text-decoration: none;
+}
+
+
+img{
+  width: 80%;
+}
+
+::selection {
+  background-color: #ffcc00; /* Cambia el color de fondo de la selección */
+  color: #000; /* Cambia el color del texto seleccionado */
+}
+

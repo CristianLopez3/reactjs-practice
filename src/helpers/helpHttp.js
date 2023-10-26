@@ -14,7 +14,7 @@ export const helpHttp = () => {
     options.body =  JSON.stringify(options.body) || false;
     if (!options.body) delete options.body; // no podemos enviar un body vacio o falso;
 
-    console.log(options);
+    // console.log(options);
     setTimeout(() => controller.abort(), 3000); // cancelar la peticion si esta se demora mas de 3 segundos
 
     return  fetch(endPoint, options)
