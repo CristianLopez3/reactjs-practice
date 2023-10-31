@@ -1,5 +1,7 @@
 import React from "react";
 import { useForm } from "../hooks/useForm";
+import { Loader } from "./Loader";
+import { Message } from "./Message";
 
 const initialForm = {
   name: "",
@@ -8,7 +10,11 @@ const initialForm = {
   comments: "",
 };
 
-// Esta función funciona en el manejador handleBlur
+/**
+ * Validaciones de nuestro formulario
+ * @param {*} form 
+ * @returns 
+ */
 const validateForm = (form) => {
   // Por cada atributo que tengamos, debe haber una propiedad
   let errors = {};
@@ -19,28 +25,26 @@ const validateForm = (form) => {
 
   if (!form.name.trim()) {
     errors.name = "The field 'name' is required";
-  } else if(!regexName.test(form.name.trim())){ 
+  } else if (!regexName.test(form.name.trim())) {
     errors.name = "The field 'name' only accept letters and white spaces";
   }
 
   if (!form.email.trim()) {
     errors.email = "The field 'email' is required";
-  }else if(!regexEmail.test(form.email.trim())){ 
+  } else if (!regexEmail.test(form.email.trim())) {
     errors.name = "The field 'email' is incorrect";
   }
-
 
   if (!form.subject.trim()) {
     errors.subject = "The field 'subject' is required";
   }
 
-
   if (!form.comments.trim()) {
     errors.comments = "The field 'comments' is required";
-  } else if(!regexComments.test(form.comments.trim())){ 
-    errors.name = "The field 'comments' only accept 255 character as its maximun  ";
+  } else if (!regexComments.test(form.comments.trim())) {
+    errors.name =
+      "The field 'comments' only accept 255 character as its maximun  ";
   }
-
 
   return errors;
 };
@@ -49,6 +53,12 @@ const styles = {
   color: "#dc3545",
   fontWeight: "bold",
 };
+
+
+/**
+ * UI para nuestro formulario
+ * @returns html-code
+ */
 
 export default function ContactForm() {
   const {
@@ -65,7 +75,6 @@ export default function ContactForm() {
     <div>
       <h2>Contact form</h2>
       <form onSubmit={handleSubmit}>
-        
         <input
           type="text"
           name="name"
@@ -113,6 +122,13 @@ export default function ContactForm() {
 
         <input type="submit" value="Send" />
       </form>
+
+      {loading && <Loader /> /* Para cuando es cargando el formulario */}
+      {
+        response && (
+          <Message msg="Data correctly send" bgColor="#198754" />
+        ) /* Mensaje de exito para el envio del formulario  */
+      }
     </div>
   );
 }
