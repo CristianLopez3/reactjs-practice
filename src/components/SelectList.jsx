@@ -28,7 +28,7 @@ const SelectList = ({ title, url, handleChange }) => {
     
       <label htmlFor={id}>{label}</label>
       {loading && <Loader />}
-
+  
       <select name={id} id={id} onChange={handleChange}>
         <option value="x"> Elige un /a {title}</option>
         {data &&
