@@ -1,14 +1,16 @@
-import React from 'react'
+
 import Modal from './Modal';
+import ModalPortal from './ModalPortal';
 import { useModal } from '../hooks/useModal';
 import ContactForm from './ContactForm';
 
 const Modals = () => {
 
   // Una invocacion por cada modal.
-  const [isOpen1, openModal1, closeModal1] = useModal(false); 
-  const [isOpen2, openModal2, closeModal2] = useModal(false); 
-  const [isOpenContact, openContact, closeContact] = useModal(false); 
+  const [isOpen1, openModal1, closeModal1] = useModal(false);
+  const [isOpen2, openModal2, closeModal2] = useModal(false);
+  const [isOpenContact, openContact, closeContact] = useModal(false);
+  const [isOpenPortal, openPortal, closePortal] = useModal(false);
 
   return (
     <div>
@@ -31,6 +33,12 @@ const Modals = () => {
       <Modal isOpen={isOpenContact} closeModal={closeContact}>
         <ContactForm />
       </Modal>
+
+      <button onClick={openPortal}>Portal Modal</button>
+      <ModalPortal isOpen={isOpenPortal} closeModal={closePortal}>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore error architecto commodi quidem dolore neque vitae sequi ex officia suscipit!</p>
+        <img src="https://placekitten.com/360/360" alt="animal" />
+      </ModalPortal>
 
 
     </div>
