@@ -16,10 +16,10 @@ const ProductoDetalle = ({productos}) => {
   
   return (
     <div>
-      <h1>Detalle del producto</h1>
-      <h2>Nombre: {producto.nombre}</h2>
-      <h3>Id: {producto.id}</h3>
-      <h4>Precio: {producto.precio}</h4>
+      <h2 style={{fontSize: '1.5rem', color: 'orangered'}}>Detalle del producto</h2>
+      <h3>Nombre: {producto.nombre}</h3>
+      <h4>Id: {producto.id}</h4>
+      <h5>Precio: {producto.precio}</h5>
       <button onClick={handleGoBack}>Regresar</button>
     </div>
   )
