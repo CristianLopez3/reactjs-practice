@@ -10,6 +10,7 @@ const Menu = () => {
         <Link to="/about">About / </Link>
         <Link to="/contacto">Contacto / </Link>
         <Link to="/productos">Productos / </Link>
+        <Link to="/servicios">Servicios / </Link>
         <Link to="/inexistente">Error 404 / </Link>
       </nav>
       <nav>
