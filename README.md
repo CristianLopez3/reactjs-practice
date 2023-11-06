@@ -21,7 +21,6 @@ Se define cada una de las rutas
     Especifica la ruta en la cual se van a renderizar ciertos componentes. </li>
      <li> <b>Exact: </b> 
     hace que cada ruta que agregamos tenga que se especifica, lo cual nos permite renderizar correctamente los componentes.</li>
-
     <li> <b>Component: </b> 
     Es lo que en el react route de hoy en dia se conoce como element, aunque tambien se puede usar la propiedad <i> Children</i> </li>
 
