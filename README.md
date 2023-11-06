@@ -15,10 +15,19 @@ Ir de las rutas mas expeficias a las mas genericas.
 
 
 ### Route properties
+Se define cada una de las rutas
 <ul> 
     <li> <b>Path: </b> 
     Especifica la ruta en la cual se van a renderizar ciertos componentes. </li>
      <li> <b>Exact: </b> 
     hace que cada ruta que agregamos tenga que se especifica, lo cual nos permite renderizar correctamente los componentes.</li>
+
+    <li> <b>Component: </b> 
+    Es lo que en el react route de hoy en dia se conoce como element, aunque tambien se puede usar la propiedad <i> Children</i> </li>
+
 </ul>
+
+### Switch
+No funciona en la nueva version, ya que los elementos se renderizan correctamente.
+
 
