@@ -2,7 +2,7 @@
   "protas": [
     {
       "character": "Naruto",
-      "anime": "Naruto",
+      "anime": "Naruta Shippuden",
       "id": 10
     },
     {
@@ -16,11 +16,6 @@
       "id": 3
     },
     {
-      "character": "Seiya",
-      "anime": "Saint Seiya",
-      "id": 4
-    },
-    {
       "character": "Alucard",
       "anime": "Hellsing",
       "id": 6
@@ -29,6 +24,11 @@
       "character": "Gintoki",
       "anime": "Gintama",
       "id": 1698193064617
+    },
+    {
+      "character": "Felipe",
+      "anime": "Omae",
+      "id": 1700101077252
     }
   ]
 }

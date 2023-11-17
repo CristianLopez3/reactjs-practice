@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { HashRouter, Link, NavLink, Route, Routes } from "react-router-dom";
 import CrudForm from "./CrudForm";
 import CrudTable from "./CrudTable";
 import { helpHttp } from "../helpers/helpHttp";
@@ -116,6 +117,37 @@ function CrudApi() {
 
   return (
     <>
+
+      <HashRouter basename="/animes">
+    
+        <header>  
+          <h2>Crud API</h2>
+          <nav>
+            <Link to="/" > Santos </Link>
+            <Link to="/agregar" > agregar </Link>
+          </nav>
+        </header>
+
+        <Routes>
+
+           
+          <Route  path="/"> 
+            <h2>Home Santos</h2>
+          </Route>
+
+          <Route  path="/agregar">
+            <h2>Home Agregar</h2>  
+          </Route>
+
+          <Route  path="/editar/:id">
+            <h2>Home Editar</h2>  
+          </Route>
+
+          <Route path="/no" element={<h2>hola</h2>} />
+
+        </Routes>
+
+      </HashRouter>
       <h3> Crud Api </h3>
 
       <article className="grid-1-2">

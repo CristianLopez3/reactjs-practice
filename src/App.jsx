@@ -11,11 +11,10 @@ function App() {
       <h1>Crud with React</h1>
       <hr />
       <SelectAnidados />
-      {/* <SongSearch /> */}
       <hr />
-      {/* <CrudApi /> */}
+      <SongSearch />
       <hr />
-      {/* <CrudApp /> */}
+      <CrudApi />
       <hr />
     </>
   );
