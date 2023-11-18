@@ -5,6 +5,7 @@ import CrudTable from "./CrudTable";
 import { helpHttp } from "../helpers/helpHttp";
 import { Loader } from "./Loader";
 import { Message } from "./Message";
+import './CrudApi.css';
 
 function CrudApi() {
   const [db, setDb] = useState(null);
@@ -118,34 +119,25 @@ function CrudApi() {
   return (
     <>
 
-      <HashRouter basename="/animes">
-    
-        <header>  
+
+
+      <HashRouter>
+
+        <header className="Navbar">
           <h2>Crud API</h2>
           <nav>
-            <Link to="/" > Santos </Link>
-            <Link to="/agregar" > agregar </Link>
+            <Link to="/animes">Home</Link>
+            <Link to="/animes/add" > Add </Link>
+            <Link to="/ animes/update/2" > Update </Link>
           </nav>
         </header>
 
-        <Routes>
-
-           
-          <Route  path="/"> 
-            <h2>Home Santos</h2>
-          </Route>
-
-          <Route  path="/agregar">
-            <h2>Home Agregar</h2>  
-          </Route>
-
-          <Route  path="/editar/:id">
-            <h2>Home Editar</h2>  
-          </Route>
-
-          <Route path="/no" element={<h2>hola</h2>} />
-
+        <Routes path="/animes">
+          <Route path="/" element={<h2> Anime Home </h2>} />
+          <Route path="add" element={<h2>Anime Add</h2>} />
+          <Route path="update/:id" element={<h2> Anime update </h2>} />
         </Routes>
+
 
       </HashRouter>
       <h3> Crud Api </h3>
