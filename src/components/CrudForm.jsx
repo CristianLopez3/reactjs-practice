@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from "react-router-dom";
 
 let initialForm = {
   character: '',
@@ -9,13 +10,14 @@ let initialForm = {
 const CrudForm = ({ createData, updateData, dataToEdit, setDataToEdit }) => {
 
   const [form, setForm] = useState(initialForm);
+  let navigate = useNavigate(); // Allow us to navigate through routes and history.
 
   useEffect(() => {
     if (dataToEdit) {
       // Actualizamos los valores de los input con los datos que se ejecutaron desde la fila de la tabla
       setForm(dataToEdit);
     } else {
-      setForm(initialForm); // Dejamos el formulario vacio.
+      setForm(initialForm); // Dejamos el formulario vació.
     }
   }, [dataToEdit])
 
@@ -47,6 +49,7 @@ const CrudForm = ({ createData, updateData, dataToEdit, setDataToEdit }) => {
   const handleReset = () => {
     setForm(initialForm);
     setDataToEdit(null);
+    navigate(-1);
   }
 
   return (

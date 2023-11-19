@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { HashRouter, Link, NavLink, Route, Routes } from "react-router-dom";
+import { HashRouter, BrowserRouter, Link, NavLink, Route, Routes } from "react-router-dom";
 import CrudForm from "./CrudForm";
 import CrudTable from "./CrudTable";
 import { helpHttp } from "../helpers/helpHttp";
 import { Loader } from "./Loader";
 import { Message } from "./Message";
 import './CrudApi.css';
+import { Page404 } from './Page404.jsx';
 
 function CrudApi() {
   const [db, setDb] = useState(null);
@@ -128,43 +129,71 @@ function CrudApi() {
           <nav>
             <Link to="/animes">Home</Link>
             <Link to="/animes/add" > Add </Link>
-            <Link to="/ animes/update/2" > Update </Link>
           </nav>
         </header>
 
-        <Routes path="/animes">
-          <Route path="/" element={<h2> Anime Home </h2>} />
-          <Route path="add" element={<h2>Anime Add</h2>} />
-          <Route path="update/:id" element={<h2> Anime update </h2>} />
+        <Routes>
+
+
+
+          <Route path="/animes">
+
+
+            <Route index errorElement={<Message />} element={
+              <CrudTable
+                  dataDb={db}
+                  deleteData={deleteData}
+                  setDataToEdit={setDataToEdit}
+                  dataToEdit={dataToEdit}
+              />
+            } />
+
+            <Route path="add" element={
+              <CrudForm
+                  createData={createData}
+                  updateData={updateData}
+                  dataToEdit={dataToEdit}
+                  setDataToEdit={setDataToEdit}
+              />
+            } />
+
+            <Route path="update/:id" element={
+              <CrudForm
+                  createData={createData}
+                  updateData={updateData}
+                  dataToEdit={dataToEdit}
+                  setDataToEdit={setDataToEdit}
+              />
+            } />
+          </Route>
+
+          <Route path='*' element={<Page404 />} />
         </Routes>
 
 
       </HashRouter>
-      <h3> Crud Api </h3>
 
       <article className="grid-1-2">
-        <CrudForm
-          createData={createData}
-          updateData={updateData}
-          dataToEdit={dataToEdit}
-          setDataToEdit={setDataToEdit}
-        />
+
 
         {loading && <Loader />}
+
         {error && (
           <Message
             msg={`Error ${error.status}: ${error.statusText}`}
             bgColor="#db3545"
           />
         )}
-        {db && (
-          <CrudTable
-            dataDb={db}
-            deleteData={deleteData}
-            setDataToEdit={setDataToEdit}
-            dataToEdit={dataToEdit}
-          />
-        )}
+
+        {/*{db && (*/}
+        {/*  <CrudTable*/}
+        {/*    dataDb={db}*/}
+        {/*    deleteData={deleteData}*/}
+        {/*    setDataToEdit={setDataToEdit}*/}
+        {/*    dataToEdit={dataToEdit}*/}
+        {/*  />*/}
+        {/*)}*/}
+
       </article>
     </>
   );

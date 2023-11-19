@@ -2,7 +2,7 @@
   "protas": [
     {
       "character": "Naruto",
-      "anime": "Naruta Shippuden",
+      "anime": "Naruto Shippuden",
       "id": 10
     },
     {
@@ -26,9 +26,24 @@
       "id": 1698193064617
     },
     {
+      "character": "Saiki",
+      "anime": "Saiki lifes",
+      "id": 1700426441986
+    },
+    {
+      "character": "Alucard",
+      "anime": "Hellsing",
+      "id": 1700426850396
+    },
+    {
       "character": "Felipe",
-      "anime": "Omae",
-      "id": 1700101077252
+      "anime": "El loco",
+      "id": 1700427340963
+    },
+    {
+      "character": "Rentaro",
+      "anime": "Kanojo 100th",
+      "id": 1700427853746
     }
   ]
 }
