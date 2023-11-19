@@ -172,29 +172,15 @@ function CrudApi() {
 
 
       </HashRouter>
-
-      <article className="grid-1-2">
-
-
-        {loading && <Loader />}
-
-        {error && (
-          <Message
-            msg={`Error ${error.status}: ${error.statusText}`}
-            bgColor="#db3545"
-          />
-        )}
-
-        {/*{db && (*/}
-        {/*  <CrudTable*/}
-        {/*    dataDb={db}*/}
-        {/*    deleteData={deleteData}*/}
-        {/*    setDataToEdit={setDataToEdit}*/}
-        {/*    dataToEdit={dataToEdit}*/}
-        {/*  />*/}
-        {/*)}*/}
-
-      </article>
+      {/*<article className="grid-1-2">*/}
+      {/*  {loading && <Loader />}*/}
+      {/*  {error && (*/}
+      {/*    <Message*/}
+      {/*      msg={`Error ${error.status}: ${error.statusText}`}*/}
+      {/*      bgColor="#db3545"*/}
+      {/*    />*/}
+      {/*  )}*/}
+      {/*</article>*/}
     </>
   );
 }

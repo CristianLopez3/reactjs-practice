@@ -1,9 +1,8 @@
 import { useState } from "react";
 import "./App.css";
-import CrudApp from "./components/CrudApp";
-import CrudApi from "./components/CrudApi";
+// import CrudApi from "./components/CrudApi";
 import SongSearch from "./components/SongSearch";
-import SelectAnidados from "./components/SelectAnidados";
+
 
 function App() {
   return (
@@ -12,9 +11,9 @@ function App() {
       <hr />
       {/*<SelectAnidados />*/}
       {/*<hr />*/}
-      {/*<SongSearch />*/}
+      <SongSearch />
       {/*<hr />*/}
-      <CrudApi />
+      {/*<CrudApi />*/}
       <hr />
     </>
   );

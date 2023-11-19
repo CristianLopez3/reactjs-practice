@@ -3,6 +3,8 @@ import SongForm from './SongForm';
 import SongDetails from './SongDetails';
 import { Loader } from './Loader';
 import { helpHttp } from '../helpers/helpHttp';
+import {HashRouter, Link, Route, Routes} from "react-router-dom";
+import {Page404} from "./Page404.jsx";
 
 
 const SongSearch = () => {
@@ -47,12 +49,40 @@ const SongSearch = () => {
 
   return (
     <>
-      <h2>Song Search</h2>
-      {loading && <Loader />}
-      <SongForm handleSearch = {handleSearch} />
-      {search && !loading && (
-        <SongDetails search={search}  bio={bio} />
-      )}
+
+
+      <HashRouter>
+        <header>
+          <h2>Song Search</h2>
+          <nav>
+            <Link to='/'>home</Link>
+            <Link to=''></Link>
+          </nav>
+        </header>
+
+        {loading && <Loader />}
+
+        <Routes>
+          <Route path="/" element={
+            <>
+              <SongForm handleSearch = {handleSearch} />
+              <h2> Tabla de Canciones </h2>
+              {search && !loading && (
+                  <SongDetails search={search}  bio={bio} />
+              )}
+            </>
+          } />
+
+          <Route path="song/:id" element={
+            <>
+              <h2> Songs Page </h2>
+            </>
+          } />
+
+          <Route path="*" element={<Page404 />} />
+
+        </Routes>
+      </HashRouter>
       
     </>
   )
