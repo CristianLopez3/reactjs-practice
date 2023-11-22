@@ -6,11 +6,13 @@ import { helpHttp } from '../helpers/helpHttp';
 import {HashRouter, Link, Route, Routes} from "react-router-dom";
 import {Page404} from "./Page404.jsx";
 
+let mySongsInit = JSON.parse(localStorage.getItem("mySongs") ) || [] ;
 
 const SongSearch = () => {
   const [search, setSearch] = useState(null);
   const [bio, setBio] = useState(null);
   const [loading, setLoading] = useState(null);
+  const [mySongs, setMySong] = useState(mySongsInit);
 
   useEffect(() => {
     if(search === null) return ;
@@ -38,13 +40,21 @@ const SongSearch = () => {
     }
 
     fetchData();
-
-  }, [ search ])
+    localStorage.setItem("mySongs", JSON.stringify(mySongs));
+  }, [ search, mySongs ])
 
 
   const handleSearch = (data) => {
     // console.log(data);
     setSearch(data);
+  }
+
+  const handleSaveSong = () => {
+    alert("Salvando una cancion en favoritos");
+  }
+
+  const handleDeleteSong = (id) => {
+
   }
 
   return (
