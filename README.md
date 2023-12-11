@@ -1,31 +1,8 @@
-# React + Vite + React - Router
+# React + Vite
 
-Aspects important if in the future I need :
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-* useNavigate()
-* useState()
-* useEffect()
-* HashRouter
-* Nesting Routes.
-* localStorage
+Currently, two official plugins are available:
 
-## Local Storage :book:
-local storage basic functions:
-
-```JSX
-localStorage.setItem(name, value);
-localStorage.getItem(name, value);
-```
-
-In the localStorage values you can add arrays and simple variables
-
-## Content
-
-Links of content with I take a guide or practice: 
-
-```Youtube
-https://www.youtube.com/watch?v=WQUoMAOum_8&list=PLvq-jIkSeTUZ5XcUw8fJPTBKEHEKPMTKk&index=73
-```
-
-## Credits
-Visit @jonmircha on youtube, his content is very nice for spanish people
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
