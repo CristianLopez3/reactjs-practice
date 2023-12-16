@@ -39,6 +39,15 @@ function App() {
         <li>use it whenever a function is passed as a prop to a stored component.</li>
         <li>Use it always that a funciton is passed as a parameter in a effect.</li>
       </ul>
+
+        
+      <hr />
+      <ul>
+      <b>Use Memo</b>
+        <li>Memoriza a calculate value, a funtion's result</li>
+        <li>Generate computate props</li>
+        <li>Use it in hard weight process</li>
+      </ul>
     </>
   )
 }
