@@ -1,9 +1,9 @@
 
 
-const Footer = ({theme}) =>  {
+const Footer = ({theme, text}) =>  {
     return ( 
         <footer className={theme}>
-            <p>&copy; footer</p>
+            <p>&copy; {text.footerTitle}</p>
         </footer>
      );
 }

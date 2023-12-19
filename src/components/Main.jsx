@@ -1,10 +1,13 @@
 
 
-const Main = ({theme}) =>  {
+const Main = ({theme, text, auth}) =>  {
     return ( 
         <main className={theme}>
-            <p>Wellcome Guest </p>
-            <p>Wellcome User </p>
+            {
+                auth 
+                ? <p> {text.mainHello} </p>
+                : <p>{text.mainWelcome} </p>
+            }
         </main>
      );
 }
