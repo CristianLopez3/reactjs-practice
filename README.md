@@ -19,4 +19,17 @@ El contexto recibe dos valores, el wrapper o proveedor del contexto y el consumi
 ```
 
 > [!IMPORTANT]
-> Desde la creacion de los hooks en react 16.8, no se necesita un consumer que envuelva todo ya que useContext lo reemplaza
+> Desde la creacion de los hooks en react 16.8, no se necesita un consumer que envuelva todo ya que useContext lo reemplaza.
+
+> [!IMPORTANT]
+> No puedes tener el contexto y el proveedor en el mismo archivo.
+
+### Install
+
+para poder correr bien este brazo necesitas ejecutar los siguiente comandos en tu bash:
+
+
+```node
+    npm i 
+    npm i json-server
+```
