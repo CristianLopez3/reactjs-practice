@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import MyPage from './components/MyPage'
+import MyPageContext from './components/MyPageContext'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -9,6 +10,8 @@ function App() {
     <>
       <h1>React Context Api</h1>
       <a href="https://es.react.dev/reference/react/useContext#usage">Documentation</a>
+      <hr />
+      <MyPageContext />
       <hr />
       <MyPage />
     </>
