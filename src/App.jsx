@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <h1>React Context Api</h1>
-      <a href="https://es.react.dev/reference/react/useContext#usage">Documentation</a>
+      <a href="https://es.react.dev/reference/react/useContext#usage" target='_blank'>Documentation</a>
       <hr />
       <MyPageContext />
       <hr />

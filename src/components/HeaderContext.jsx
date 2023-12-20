@@ -1,15 +1,21 @@
 import { useContext } from "react";
 import ThemeContext from "../context/ThemeContext";
+import LanguageContext from "../context/LanguageContext";
+import AuthContext from "../context/AuthContext";
 
-const HeaderContext = ({ text, handleLanguage, auth, handleAuth }) => {
+
+const HeaderContext = () => {
+
   const {theme, handleTheme} = useContext(ThemeContext);
-
+  const {texts, handleLanguage} = useContext(LanguageContext);
+  const {  auth, handleAuth } = useContext(AuthContext);
+  
   return (
     <header className={theme}>
       <h2>
-        {text.headerTitle}
+        {texts.headerTitle}
       </h2>
-      <h3>{text.headerSubtitle}</h3>
+      <h3>{texts.headerSubtitle}</h3>
       <select name="language" onChange={handleLanguage}>
         <option value="es">ES</option>
         <option value="en">EN</option>
@@ -22,7 +28,7 @@ const HeaderContext = ({ text, handleLanguage, auth, handleAuth }) => {
         onClick={handleTheme}
         value="light"
       />
-      <label htmlFor="lightContext">{text.headerLight}</label>
+      <label htmlFor="lightContext">{texts.headerLight}</label>
 
       <input
         type="radio"
@@ -32,9 +38,9 @@ const HeaderContext = ({ text, handleLanguage, auth, handleAuth }) => {
         value="dark"
       />
       
-      <label htmlFor="darkContext">{text.headerDark}</label>
+      <label htmlFor="darkContext">{texts.headerDark}</label>
 
-      <button onClick={handleAuth} >{auth ?  text.buttonLogout : text.buttonLogin }</button>
+      <button onClick={handleAuth} >{auth ?  texts.buttonLogout : texts.buttonLogin }</button>
     </header>
   );
 };
