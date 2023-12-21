@@ -1,8 +1,8 @@
-# React + Vite
+# Reducers
+ 
+useReducer es un hook de React que te permite administrar el estado de un componente utilizando un patrón de "reducción". Básicamente, es una alternativa a useState cuando la lógica del estado se vuelve más compleja.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+El hook useReducer toma dos argumentos: el primer argumento es una función reductora (reducer function) y el segundo es el estado inicial. La función reductora recibe dos argumentos: el estado actual y una acción, y devuelve el nuevo estado.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+> [!NOTE]
+>  useReducer es una funcion pura (funcion pura: no afecta valores globales)
