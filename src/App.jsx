@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Counter from './components/Counter'
+import CounterImproved from './components/CounterImproved'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -11,7 +12,10 @@ function App() {
     <>
       <h1>Use Reducer</h1>
       <hr />
+      <CounterImproved />
+      <hr />
       <Counter />
+
  
     </>
   )

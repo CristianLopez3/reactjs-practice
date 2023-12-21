@@ -6,3 +6,9 @@ El hook useReducer toma dos argumentos: el primer argumento es una función redu
 
 > [!NOTE]
 >  useReducer es una funcion pura (funcion pura: no afecta valores globales)
+
+### Params
+useReducer recibe tres parametros, los cuales son:
+* Reducer: debe ser la funcion que maneje toda la logica.
+* initialState: debe contener el estado inicial de la variable u objeto que queremos manejar.
+* init: este parametro es opcional, debe ser una funcion que contenga la logica de primer renderizado de la variabla a manejar

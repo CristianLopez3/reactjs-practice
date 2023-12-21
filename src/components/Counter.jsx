@@ -1,4 +1,4 @@
-import { useState, useReducer } from "react";
+import {  useReducer } from "react";
 
 const TYPES = {
   INCREMENT: "INCREMENT",
@@ -9,6 +9,11 @@ const TYPES = {
 };
 
 const initialState = { counter: 0 };
+const init = (initialState) => {
+  return {
+    counter: initialState.counter + 100
+  }
+}
 
 function reducer(state, action) {
   switch (action.type) {
@@ -29,13 +34,13 @@ function reducer(state, action) {
 
 const Counter = () => {
   // const [counter, setCounter] = useState(0);
-  const [state, dispatch] = useReducer(reducer, initialState);
+  // const [state, dispatch] = useReducer(reducer, initialState, init);
+  const [state, dispatch] = useReducer(reducer, initialState, init);
 
   // const plus = () => setCounter(counter + 1);
   const plus = () => dispatch({ type: TYPES.INCREMENT });
   // const subtract = () => setCounter(counter - 1);
   const subtract = () => dispatch({ type: TYPES.DECREMENT });
-
   const plus5 = () => dispatch({ type: TYPES.INCREMENT_5, payload: 5 });
   const subtract5 = () => dispatch({ type: TYPES.DECREMENT_5, payload: 5 });
   const reset = () => dispatch({ type: TYPES.RESET });
