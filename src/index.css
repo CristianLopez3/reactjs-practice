@@ -12,3 +12,20 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.box{
+  padding: 1rem;
+  margin: 1rem;
+  box-shadow: 0 0 1rem gray;
+}
+
+.grid-responsive {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+input, button{
+  margin: .5rem 1rem;
+  font-size: 1rem;
+}
