@@ -1,8 +1,10 @@
-# React + Vite
+# Redux
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Is a library to handle the state in our medium or big Apps, no matter what js tool you use 
+Redux work.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+>[!TIP]
+> Install the next dependencies to work with reducers: 
+```npm
+  npm i react react-redux @react-devtools/extension
+```
