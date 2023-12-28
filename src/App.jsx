@@ -5,6 +5,7 @@ import "./App.css";
 import ReduxTheory from "./components/ReduxTheory";
 import { Provider } from "react-redux";
 import store from "./store";
+import Counter from "./components/Counter";
 
 function App() {
   return (
@@ -12,7 +13,9 @@ function App() {
       <div>
         <h1>Redux With React</h1>
         <hr />
-        <ReduxTheory />
+        <Counter />
+        <hr />
+        {/* <ReduxTheory /> */}
       </div>
     </Provider>
   );
