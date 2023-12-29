@@ -1,8 +1,23 @@
-# React + Vite
+# Ten en cuenta
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Extras a tener en cuenta cuando usas react.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Template
+
+Vite es el manejador de templates mas usado hoy en dia para usar react u otros frameworks como vuejs o angular, o a su vez anadir carpetas. 
+
+```npm
+  npm create vite@latest --template typescript
+```
+
+## Progressive Web Apps
+
+Como usar una template para hacer aplicaciones progresivas con Reactjs.
+
+```npm 
+  npm create vite@latest pwa --template pwa
+```
+
+[!TIP]
+> Mira la carpeta de pwa para mas informacion acerca de las progressive web apps
